@@ -3,28 +3,24 @@
 body {
   margin: 0;
   height: 100vh;
-  background: linear-gradient(135deg,
-  #0f0c29,  /* deep indigo */
-  #302b63,  /* dark purple */
-  #24243e,  /* dark blue */
-  #3a1c71,  /* deep violet */
-  #1e1e2f   /* almost black */
-  );
   background-size: 400% 400%;
   animation: gradientShift 15s ease infinite;
+  background: linear-gradient(135deg,
+  #0f0c29, /* deep indigo */ #302b63, /* dark purple */ #24243e, /* dark blue */ #3a1c71, /* deep violet */ #1e1e2f /* almost black */
+  ) fixed;
   color: #f0f0f0; /* Optional: light text on dark background */
   font-family: sans-serif;
 }
 
 @keyframes gradientShift {
   0% {
-    background-position: 0% 50%;
+    background-position: 0 50%;
   }
   50% {
     background-position: 100% 50%;
   }
   100% {
-    background-position: 0% 50%;
+    background-position: 0 50%;
   }
 }
 

@@ -1,5 +1,5 @@
 <div>
-  <nav class="p-5">
+  <nav class="p-5 fixed w-full z-50">
     <div class="flex flex-row justify-between items-center content-center align-middle glass-container py-4 px-8">
       <div class="flex flex-row">
         <span class="text-2xl font-bold">RevDO</span>
@@ -20,5 +20,7 @@
       </div>
     </div>
   </nav>
-  <ng-content />
+  <div class="pt-30 px-5">
+    <ng-content />
+  </div>
 </div>
