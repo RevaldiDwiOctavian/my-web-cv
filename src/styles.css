@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(135deg,
+  #0f0c29,  /* deep indigo */
+  #302b63,  /* dark purple */
+  #24243e,  /* dark blue */
+  #3a1c71,  /* deep violet */
+  #1e1e2f   /* almost black */
+  );
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  color: #f0f0f0; /* Optional: light text on dark background */
+  font-family: sans-serif;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@layer components {
+  .glass-container {
+    @apply bg-white/5 border border-white/20 rounded-xl shadow-xl backdrop-blur-md p-8 text-white;
+  }
+
+  .hover-glass {
+    @apply transition-all duration-100 rounded-xl border-white/20;
+  }
+
+  .hover-glass:hover {
+    @apply bg-white/5 border border-white/20 rounded-xl shadow-xl backdrop-blur-md text-white;
+  }
+
+  .hover-glass:active {
+    @apply bg-white/5 border border-white/20 rounded-xl shadow-xl backdrop-blur-md text-white
+  }
+}
